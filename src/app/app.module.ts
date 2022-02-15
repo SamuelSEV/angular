@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { AlumnadoDAWComponent } from './alumnado/alumnado.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { CocheComponent } from './coche/coche.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpleadoComponent,
-    AlumnadoDAWComponent
+    AlumnadoDAWComponent,
+    HomeComponent,
+    ContactoComponent,
+    CocheComponent
   ],
   imports: [
     BrowserModule,
