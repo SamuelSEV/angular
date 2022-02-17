@@ -12,6 +12,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: 'coche', component: CocheComponent},
+  {path: 'coche/:id', component: CocheComponent},
+  {path: 'alumnado/:id', component: AlumnadoDAWComponent},
   {path: '', component: EmpleadoComponent},
   {path: '**', component: EmpleadoComponent}
 ];
