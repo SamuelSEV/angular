@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   }
 
   eliminarRopa(): void{
-    this._ropaService.deleteRopa(1);
+    this._ropaService.deleteRopa();
   }
 
 }
