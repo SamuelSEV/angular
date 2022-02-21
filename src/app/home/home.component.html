@@ -1,1 +1,13 @@
 <p>home works!</p>
+<div *ngFor="let elemento of mostrar()">
+    <p>{{elemento}}</p>
+</div>
+<div>
+    <input [(ngModel)]="prenda" type="text">
+    <input type="button" (click)="anadirRopa()" value="Añadir">
+    <input type="button" (click)="eliminarRopa()" value="Eliminar">
+
+    <ul *ngFor="let elemento of mostrar()">
+        <li>{{elemento}} <button (click)="borrarRopaIndex(elemento)">Eliminar</button></li>
+    </ul>
+</div>

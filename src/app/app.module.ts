@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CocheComponent } from './coche/coche.component';
+import { PipePipe } from './pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CocheComponent } from './coche/coche.component';
     AlumnadoDAWComponent,
     HomeComponent,
     ContactoComponent,
-    CocheComponent
+    CocheComponent,
+    PipePipe
   ],
   imports: [
     BrowserModule,

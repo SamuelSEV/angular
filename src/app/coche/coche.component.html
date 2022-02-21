@@ -1,1 +1,18 @@
-<p>coche works!</p>
+<div *ngIf="id ; else noId">
+    {{id}}
+    <ul *ngFor="let coche of Coches">
+        <li *ngIf="coche.id == id">{{coche.name}}
+        </li>
+        
+    </ul>
+    <button (click)="onBack()">Volver</button>
+
+</div>
+
+
+<ng-template #noId>
+    <ul *ngFor="let coche of Coches">
+        <li>{{coche.name}}</li>
+        <a [routerLink]="['/coche/',coche.id]">Chcek product</a>
+    </ul>
+</ng-template>
