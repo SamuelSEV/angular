@@ -1,5 +1,9 @@
 <p>home works!</p>
-<h3>Añadir ropa</h3>
-<input type="text" [(ngModel)]="añadir_ropa"/>
-<button (click)="addRopa(añadir_ropa)">AñadirRopa</button>
-<button (click)="deleteRopa(añadir_ropa)">AñadirRopa</button>
+<div *ngFor="let elemento of mostrar()">
+    <p>{{elemento}}</p>
+</div>
+<div>
+    <input [(ngModel)]="prenda" type="text">
+    <input type="button" (click)="anadirRopa()" value="Añadir">
+    <input type="button" (click)="eliminarRopa()" value="Eliminar">
+</div>

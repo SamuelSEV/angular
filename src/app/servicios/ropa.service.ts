@@ -16,6 +16,5 @@ export class RopaService {
   }
   deleteRopa(index:number){
     this.coleccionRopa.splice(index,1);
-    
   }
 }

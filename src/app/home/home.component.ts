@@ -8,15 +8,31 @@ import { RopaService } from '../servicios/ropa.service';
   providers: [RopaService]
 })
 export class HomeComponent implements OnInit {
-  public titulo: string = "Pagina principal";
-  public añadir_ropa:string;
-  constructor(
-    private _ropaservice: RopaService
-    
-  ) { this.añadir_ropa='pantalon';}
+  public ropa: Array<string>; 
+  public prenda:string
+  constructor(private _ropaService: RopaService) {
+    this.ropa=[];
+    this.prenda="";
+  }
 
   ngOnInit(): void {
-    console.log(this._ropaservice.prueba());
+    this.obtener();
+  }
+
+  obtener(): void{
+    this.ropa=this._ropaService.getRopa();
+  }
+
+  mostrar(): Array<string>{
+    return this.ropa;
+  }
+
+  anadirRopa(): void{
+    this._ropaService.addRopa(this.prenda)
+  }
+
+  eliminarRopa(): void{
+    this._ropaService.deleteRopa(1);
   }
 
 }
